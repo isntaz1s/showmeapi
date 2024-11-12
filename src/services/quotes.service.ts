@@ -1,8 +1,4 @@
-import { eq } from 'drizzle-orm';
 import { FastifyRequest, FastifyReply } from 'fastify';
-import { unknown } from 'zod';
-import { db } from '~/drizzle/db';
-import { quotesTable } from '~/drizzle/schema';
 import {
   insertOneQuote,
   selectQuoteById,
