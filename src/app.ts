@@ -6,6 +6,7 @@ import fastifyCompress from '@fastify/compress';
 import fastifyRateLimit from '@fastify/rate-limit';
 import { logger } from '~/config/logger';
 import { quotesController } from '~/controllers/quotes.controller';
+import { poemsController } from '~/controllers/poems.controller';
 
 // assign fastify instance
 const app = fastify({
@@ -28,5 +29,6 @@ app.get('/checkhealth', (request, reply) => {
 });
 
 app.register(quotesController);
+app.register(poemsController);
 
 export default app;
