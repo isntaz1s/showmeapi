@@ -1,7 +1,7 @@
 import * as pg from 'drizzle-orm/pg-core';
 import { timestamps } from '~/drizzle/helpers/columns.helper';
 
-const poemsTable = pg.pgTable('poems', {
+export const poemsTable = pg.pgTable('poems', {
   id: pg.uuid().defaultRandom(),
   body: pg.text().notNull(),
   author: pg.varchar().notNull(),
