@@ -3,10 +3,7 @@ import { db } from '~/drizzle/db';
 import { InsertPoems, poemsTable } from '~/drizzle/schema';
 
 export const selectPoems = async () => {
-  const poemsPrepared = db
-    .select()
-    .from(poemsTable)
-    .prepare('select_prepared');
+  const poemsPrepared = db.select().from(poemsTable).prepare('select_prepared');
   const poems = await poemsPrepared.execute();
   return poems;
 };

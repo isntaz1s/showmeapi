@@ -5,7 +5,7 @@ export const poemsTable = pg.pgTable('poems', {
   id: pg.uuid().defaultRandom(),
   body: pg.text().notNull(),
   author: pg.varchar().notNull(),
-  ...timestamps
+  ...timestamps,
 });
 
 export type SelectPoems = typeof poemsTable.$inferSelect;
