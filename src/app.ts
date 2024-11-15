@@ -14,7 +14,10 @@ const app = fastify({
 });
 
 // register plugins or middlewares
-app.register(fastifyCors);
+app.register(fastifyCors, {
+  origin: '*',
+  credentials: true
+});
 app.register(fastifyCookie);
 app.register(fastifyHelmet);
 app.register(fastifyCompress);
