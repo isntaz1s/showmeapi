@@ -26,6 +26,10 @@ app.register(fastifyRateLimit, {
   timeWindow: '1 min',
 });
 
+app.get('/', (request, reply) => {
+  return { message: 'Hello from showmeapi!' };
+});
+
 // register routes endpoint
 app.get('/checkhealth', (request, reply) => {
   return reply.statusCode;
