@@ -7,7 +7,7 @@
   "main": "./dist/main.js",
   "private": true,
   "scripts": {
-    "install": "npm run install",
+    "install": "npm i",
     "start": "cross-env NODE_ENV=production node dist/main.js",
     "dev": "cross-env NODE_ENV=development nodemon",
     "build": "tsc -p tsconfig.build.json && tsc-alias",
